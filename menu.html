@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maru Menu</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo-placeholder">
+      <a href="index.html"><img src="images/logo.png" alt="Maru Logo" style="height: 40px;"></a>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+    </nav>
+  </header>
+
+    <section class="menu-section" id="sushi">
+      <h2>🍣 Sushi</h2>
+      <div class="menu-gallery">
+    <img src="images/sushifront.jpg" data-index="0" onclick="openLightbox(0)"><img src="images/sushiback.jpg" data-index="1" onclick="openLightbox(1)"></div></section>
+    <section class="menu-section" id="special">
+      <h2>⭐ Special Menu</h2>
+      <div class="menu-gallery">
+    <img src="images/specialkorean.jpg" data-index="2" onclick="openLightbox(2)"><img src="images/specialsushi.jpg" data-index="3" onclick="openLightbox(3)"></div></section>
+    <section class="menu-section" id="menu">
+      <h2>📜 Main Menu</h2>
+      <div class="menu-gallery">
+    <img src="images/menu1.jpg" data-index="4" onclick="openLightbox(4)"><img src="images/menu2.jpg" data-index="5" onclick="openLightbox(5)"><img src="images/menu3.jpg" data-index="6" onclick="openLightbox(6)"><img src="images/menu4.jpg" data-index="7" onclick="openLightbox(7)"><img src="images/menu5.jpg" data-index="8" onclick="openLightbox(8)"><img src="images/frontmenu.jpg" data-index="9" onclick="openLightbox(9)"></div></section>
+    <section class="menu-section" id="drinks">
+      <h2>🥂 Drinks</h2>
+      <div class="menu-gallery">
+    <img src="images/drink.jpg" data-index="10" onclick="openLightbox(10)"></div></section>
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <button class="lightbox-nav lightbox-prev" onclick="prevImage()">❮</button>
+  <img id="lightbox-img" src="">
+  <button class="lightbox-nav lightbox-next" onclick="nextImage()">❯</button>
+</div>
+
+<script>
+const images = ['sushifront.jpg', 'sushiback.jpg', 'specialkorean.jpg', 'specialsushi.jpg', 'menu1.jpg', 'menu2.jpg', 'menu3.jpg', 'menu4.jpg', 'menu5.jpg', 'frontmenu.jpg', 'drink.jpg'];
+let currentIndex = 0;
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+
+function openLightbox(index) {
+  currentIndex = index;
+  lightbox.style.display = "flex";
+  lightboxImg.src = "images/" + images[currentIndex];
+}
+
+function closeLightbox() {
+  lightbox.style.display = "none";
+}
+
+function prevImage() {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  lightboxImg.src = "images/" + images[currentIndex];
+}
+
+function nextImage() {
+  currentIndex = (currentIndex + 1) % images.length;
+  lightboxImg.src = "images/" + images[currentIndex];
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'ArrowRight') nextImage();
+  else if (e.key === 'ArrowLeft') prevImage();
+  else if (e.key === 'Escape') closeLightbox();
+});
+</script>
+
+<footer>
+  <p>© 2025 Maru Restaurant | 126 Maple Ave W, Vienna, VA</p>
+</footer>
+</body>
+</html>
