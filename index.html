@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Maru Korean Cuisine & Sushi</title>
   <link rel="stylesheet" href="css/styles.css">
+	<link rel="icon" href="images/favicon.png" type="image/png" sizes="32x32">
   <style>
     .review-links img { height: 26px; margin: 0 12px; vertical-align: middle; }
     .map-info { display: flex; flex-wrap: wrap; align-items: stretch; }
@@ -13,9 +14,20 @@
     .map-details { flex: 1 1 50%; background: #fefefe; padding: 20px; display: flex; flex-direction: column; justify-content: center; }
   </style>
 </head>
+<script>
+window.addEventListener("scroll", function() {
+  const topBtn = document.querySelector(".back-to-top");
+  if (window.scrollY > 300) {
+    topBtn.style.display = "block";
+  } else {
+    topBtn.style.display = "none";
+  }
+});
+</script>
+	
 <body>
   <header>
-    <div class="logo-placeholder">LOGO</div>
+		<a href="index.html"><img src="images/maru_logo.png" alt="Maru Logo" style="height: 80px;"></a>
     <nav>
       <a href="index.html">Home</a>
       <a href="menu.html">Menu</a>
@@ -23,25 +35,31 @@
       <a href="#visit">Visit</a>
     </nav>
   </header>
-
-  <div class="hero">
-    <h1>Welcome to Maru Vienna</h1>
+	
+<div class="hero">
+  <div class="video-wrapper">
+    <video controls loop playsinline class="hero-video">
+      <source src="images/Maru.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-text fixed-bottom">
+      <h1>Welcome to Maru Vienna</h1>
+    </div>
   </div>
+</div>
 
   <section id="about">
     <h2>About Us</h2>
-    <p>Maru is a locally beloved restaurant in Vienna, VA, bringing authentic Korean cuisine and fresh Japanese sushi under one roof. Our chefs blend traditional recipes with modern presentation, offering a unique fusion dining experience. Whether you're craving bulgogi, miso ramen, sushi rolls, or bento boxes, we prepare every dish with premium ingredients and care.
-
-We welcome families, couples, and friends to relax in our cozy yet elegant space. We also offer convenient take-out and lunch specials. Our mission is to share a piece of Korean and Japanese culture, one plate at a time.</p>
+    <p>Maru has been proudly serving the Vienna community since November 4th, 2016, from its cozy location in the Vienna Shopping Center. We bring together authentic Korean cuisine and fresh Japanese sushi under one roof. Our chefs blend traditional recipes with modern presentation, offering a unique fusion dining experience. Whether you're craving bulgogi, miso ramen, sushi rolls, or bento boxes, we prepare every dish with premium ingredients and care. We welcome families, couples, and friends to relax in our warm yet elegant space. We also offer convenient take-out and lunch specials. Our mission is to share a piece of Korean and Japanese culture, one plate at a time.</p>
   </section>
 
   <section>
     <h2>Our Featured Dishes</h2>
     <div class="feature-grid">
-      <a href="menu.html#lunch" class="feature-box"><img src="images/icon1.png" alt="Lunch"><h3>Lunch Special</h3></a>
-      <a href="menu.html#boat" class="feature-box"><img src="images/icon2.png" alt="Boat"><h3>Sushi Boat</h3></a>
-      <a href="menu.html#teriyaki" class="feature-box"><img src="images/icon1.png" alt="Teriyaki"><h3>Teriyaki</h3></a>
-      <a href="menu.html#kbbq" class="feature-box"><img src="images/icon2.png" alt="KBBQ"><h3>K-BBQ</h3></a>
+      <a href="menu.html#lunch" class="feature-box"><img src="images/bento.png" alt="Lunch"><h3>MARU <br>Bento Box</h3></a>
+      <a href="menu.html#boat" class="feature-box"><img src="images/sushiboat.png" alt="Boat" style="height: 170px;" ><h3>Sushi & Boat</h3></a>
+      <a href="menu.html#teriyaki" class="feature-box"><img src="images/soup.png" alt="Soup" style="height: 120px;" ><h3>Korean Dishes</h3></a>
+      <a href="menu.html#kbbq" class="feature-box"><img src="images/ramen.jpg" alt="KBBQ" style="height: 120px;" ><h3>Japanese Noodles</h3></a>
     </div>
   </section>
 
@@ -51,19 +69,35 @@ We welcome families, couples, and friends to relax in our cozy yet elegant space
       <iframe src="https://maps.google.com/maps?q=126+Maple+Ave+W,+Vienna,+VA+22180&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
       <div class="map-details">
         <h3>Maru Korean Cuisine & Sushi</h3>
-        <p>126 Maple Ave W, Vienna, VA 22180<br>
-           Phone: (703) 273-1744</p>
-        <div class="review-links">
-          <a href="https://www.yelp.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Yelp_Logo.svg" alt="Yelp"></a>
-          <a href="https://maps.app.goo.gl/MWQztT9Nkpzbr9gbA" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/RedDot_Blinking.gif" alt="Google Map"></a>
-          <a href="https://www.facebook.com" target="_blank"><img src="https://upload.wikimedia.org/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"></a>
-        </div>
+        <p> Phone: (703) 273-1744 <br>
+			126 Maple Ave W, Vienna, VA 22180<br>
+		  Hours:
+			 11:00 AM – 9:30 PM (Tuesday - Sunday) </p>
       </div>
     </div>
   </section>
 
-  <footer>
-    <p>© 2025 Maru Restaurant | (703) 273-1744</p>
-  </footer>
+<footer>
+  <div class="footer-icons">
+    <img src="images/maru_logo.png" alt="Maru Logo" class="footer-logo" />
+    
+    <a href="https://www.yelp.com/biz/maru-korean-cuisine-and-sushi-vienna?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)" target="_blank" title="Yelp">
+      <img src="images/yelp.png" alt="Yelp" />
+		<span>Yelp</span>
+    </a>
+    
+    <a href="tel:+17032731744" title="Call Maru">
+      <img src="images/call.png" alt="Phone" />
+		<span>Phone</span>
+    </a>
+    
+    <a href="https://maps.app.goo.gl/uGVo6e84SmWTupBc7" target="_blank" title="Location">
+      <img src="images/location.png" alt="Map" />
+		<span>Location</span>
+    </a>
+  </div>
+  <p>© 2025 Maru Restaurant | 126 Maple Ave W, Vienna, VA</p>
+</footer>
+<a href="#top" class="back-to-top" title="Go to top">↑</a>
 </body>
 </html>
