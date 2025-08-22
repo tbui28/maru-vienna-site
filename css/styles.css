@@ -297,3 +297,11 @@ footer {
     border-width: 2px;
   }
 }
+.footer-icons a span {
+  color: white;
+  font-weight: 500;
+}
+
+.footer-icons a:hover span {
+  color: white; /* yellow highlight on hover */
+}
