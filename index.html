@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Maru Korean Cuisine & Sushi</title>
+  <link rel="stylesheet" href="css/styles.css">
+	<link rel="icon" href="images/favicon.png" type="image/png" sizes="32x32">
+  <style>
+    .review-links img { height: 26px; margin: 0 12px; vertical-align: middle; }
+    .map-info { display: flex; flex-wrap: wrap; align-items: stretch; }
+    .map-info iframe { flex: 1 1 50%; min-height: 300px; border: 0; }
+    .map-details { flex: 1 1 50%; background: #fefefe; padding: 20px; display: flex; flex-direction: column; justify-content: center; }
+  </style>
+</head>
+<script>
+window.addEventListener("scroll", function() {
+  const topBtn = document.querySelector(".back-to-top");
+  if (window.scrollY > 300) {
+    topBtn.style.display = "block";
+  } else {
+    topBtn.style.display = "none";
+  }
+});
+</script>
+	
+<body>
+  <header>
+		<a href="index.html"><img src="images/maru_logo.png" alt="Maru Logo" style="height: 80px;"></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="#about">About</a>
+      <a href="#visit">Visit</a>
+    </nav>
+  </header>
+	
+<div class="hero">
+  <div class="video-wrapper">
+    <video controls loop playsinline class="hero-video">
+      <source src="images/Maru.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-text fixed-bottom">
+      <h1>Welcome to Maru Vienna</h1>
+    </div>
+  </div>
+</div>
+
+  <section id="about">
+    <h2>About Us</h2>
+<p>
+Maru has proudly served the Vienna community since November 4th, 2016, and we are truly grateful for all the love and support over the years.
+
+As we continue to grow, we’re excited to share that Maru Korean Cuisine & Sushi is now joining with our second location, Rateba, and moving to a new home in Fairfax.
+
+You can now find us at <strong>Maru Ramen & Korean Cuisine</strong>, located in the <strong>Pan Am Shopping Center, near Micro Center</strong>.
+
+We continue to serve the same authentic Korean dishes, fresh sushi, and delicious ramen you love — now all in one place.
+
+Thank you for being part of our journey. We warmly invite you to visit us at our new Fairfax location and enjoy a great meal with us again!
+</p>
+
+  <section>
+    <h2>Our Featured Dishes</h2>
+    <div class="feature-grid">
+      <a href="menu.html#lunch" class="feature-box"><img src="images/bento.png" alt="Lunch"><h3>MARU <br>Bento Box</h3></a>
+      <a href="menu.html#boat" class="feature-box"><img src="images/sushiboat.png" alt="Boat" style="height: 170px;" ><h3>Sushi & Boat</h3></a>
+      <a href="menu.html#teriyaki" class="feature-box"><img src="images/soup.png" alt="Soup" style="height: 120px;" ><h3>Korean Dishes</h3></a>
+      <a href="menu.html#kbbq" class="feature-box"><img src="images/ramen.jpg" alt="KBBQ" style="height: 120px;" ><h3>Japanese Noodles</h3></a>
+    </div>
+  </section>
+
+  <section id="visit">
+    <h2>Visit Us</h2>
+    <div class="map-info">
+  <iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3106.373574413923!2d-77.2635225238701!3d38.869693971730015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b64bc7d14722bd%3A0x5013e32384d9f101!2sMaru%20Korean%20Cuisine%20%26%20Sushi!5e0!3m2!1sen!2sus!4v1775165550206!5m2!1sen!2sus"
+  width="100%" 
+  height="300" 
+  style="border:0;" 
+  allowfullscreen="" 
+  loading="lazy">
+</iframe>
+
+  <div class="map-details">
+        <h3>Maru Korean Cuisine & Sushi</h3>
+        <p> Phone: (571) 407-7501 <br>
+			3075 Nutley St, Fairfax, VA 22031<br>	  
+		  </p>
+		  <p>
+			 Hours:<br>
+       <strong>Monday :</strong> 04:00 PM – 12:00 AM (Midnight)<br>
+  			<strong>Tuesday - Saturday:</strong> 11:30 AM – 12:00 AM (Midnight)<br>
+  			<strong> Sunday:</strong> 11:30 AM – 9:30 PM<br>
+ 			
+		</p>
+      </div>
+    </div>
+  </section>
+
+<footer>
+  <div class="footer-icons">
+    <img src="images/maru_logo.png" alt="Maru Logo" class="footer-logo" />
+    
+    <a href="https://www.yelp.com/biz/maru-korean-cuisine-and-sushi-vienna?utm_campaign=www_business_share_popup&utm_medium=copy_link&utm_source=(direct)" target="_blank" title="Yelp">
+      <img src="images/yelp.png" alt="Yelp" />
+		<span>Yelp</span>
+    </a>
+    
+    <a href="tel:+15714077501" title="Call Maru">
+      <img src="images/call.png" alt="Phone" />
+		<span>Phone</span>
+    </a>
+    
+    <a href="https://maps.app.goo.gl/eP7rvkyhr99KMjdr9" target="_blank" title="Location">
+      <img src="images/location.png" alt="Map" />
+		<span>Location</span>
+    </a>
+  </div>
+  <p>© 2026 Maru Restaurant | 3075 Nutley St, Fairfax, VA 22031</p>
+</footer>
+<a href="#top" class="back-to-top" title="Go to top">↑</a>
+</body>
+</html>
